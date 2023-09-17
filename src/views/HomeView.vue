@@ -71,17 +71,17 @@ function scrollToFirstSlideshowCard() {
 					<h3>
 						The purpose of the app is to simplify the process of
 						splitting the bill in large groups. Instead of one
-						person having to pay with their card and calculate
+						person having to pay with his or her card and calculate
 						individual shares, the app allows users to scan a
 						restaurant receipt and send a payment request via text
 						message with a single button.
 					</h3>
 					<h3>
-						It eliminates the need to individually calculate the
-						tax/tip and send Venmo/Zelle requests individually.
+						It eliminates the need to individually calculate the tax
+						and tip and send Venmo or Zelle requests separately.
 						Although restaurants have been allowing customers to pay
 						separately, it makes the whole process very tedious for
-						the employee and further complicated..
+						the employee and even more complicated.
 					</h3>
 				</div>
 			</div>
