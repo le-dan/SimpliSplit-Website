@@ -60,7 +60,6 @@
 	justify-content: center;
 	gap: 3rem;
 	align-items: center;
-	height: 25rem;
 	width: 100%;
 	margin: 0;
 	overflow-x: auto;

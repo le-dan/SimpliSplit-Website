@@ -12,9 +12,6 @@ import { IconFileTypeTypescriptOfficial } from "@iconify-prerendered/vue-vscode-
 import { IconFileTypeLightExpo } from "@iconify-prerendered/vue-vscode-icons";
 import { IconArrowDownLine } from "@iconify-prerendered/vue-mingcute";
 
-const msg =
-	"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique blandit neque, id venenatis diam feugiat ut.";
-
 function scrollToFirstSlideshowCard() {
 	// Find the element with the id "firstSlideshowCard"
 	const firstSlideshowCard = document.getElementById("firstSlideshowCard");
@@ -77,12 +74,14 @@ function scrollToFirstSlideshowCard() {
 						person having to pay with their card and calculate
 						individual shares, the app allows users to scan a
 						restaurant receipt and send a payment request via text
-						message with a single button. It eliminates the need to
-						individually calculate the tax/tip and send Venmo/Zelle
-						requests individually. Although restaurants have been
-						allowing customers to pay separately, it makes the whole
-						process very tedious for the employee and further
-						complicated..
+						message with a single button.
+					</h3>
+					<h3>
+						It eliminates the need to individually calculate the
+						tax/tip and send Venmo/Zelle requests individually.
+						Although restaurants have been allowing customers to pay
+						separately, it makes the whole process very tedious for
+						the employee and further complicated..
 					</h3>
 				</div>
 			</div>
@@ -107,20 +106,20 @@ function scrollToFirstSlideshowCard() {
 				id="firstSlideshowCard"
 				:img="'scan.gif'"
 				:header="'Scan'"
-				:msg="msg"
+				:msg="'Effortlessly scan and digitize your receipts with a simple snap of your camera'"
 				:initial="true"
 			/>
 			<SlideshowCard
 				:img="'split.gif'"
 				:header="'Split'"
-				:msg="msg"
+				:msg="'Organize items efficiently according to each individual\'s specific order'"
 				:initial="false"
 				reverse
 			/>
 			<SlideshowCard
 				:img="'settle.gif'"
 				:header="'Settle'"
-				:msg="msg"
+				:msg="'Effortlessly send payment requests in bulk for the entire group with a single tap, utilizing SMS and Venmo redirects'"
 				:initial="false"
 			/>
 		</div>
@@ -186,7 +185,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		padding: 4rem 5rem;
+		padding: 3.5rem 5rem;
 		font-weight: 100;
 	}
 
@@ -236,7 +235,7 @@ body {
 		}
 
 		.description-section {
-			gap: 5px;
+			gap: 20px;
 			.description-header {
 				font-size: 45px;
 				font-weight: bold;
@@ -246,7 +245,6 @@ body {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				text-align: center;
 				gap: 25px;
 				width: 100%;
 				h3 {
@@ -291,9 +289,8 @@ body {
 	}
 
 	.techstack-section {
-		gap: 2rem;
 		justify-content: space-between;
-
+		gap: 20px;
 		.techstack-title {
 			font-weight: bold;
 			font-size: 40px;
@@ -326,6 +323,7 @@ body {
 	}
 
 	.developer-section {
+		gap: 20px;
 	}
 
 	.footnote {
