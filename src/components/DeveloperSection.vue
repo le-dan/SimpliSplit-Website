@@ -29,25 +29,25 @@
 	>
 		<div class="developer">
 			<a href="" target="_blank">
-				<div class="circle"><img src="../assets/dan.JPG" /></div>
+				<div class="circle"><img src="../assets/dan.jpg" /></div>
 			</a>
 			<span class="name"> Dan Le</span>
 		</div>
 		<div class="developer">
 			<a href="" target="_blank">
-				<div class="circle"><img src="../assets/minsung.PNG" /></div>
+				<div class="circle"><img src="../assets/minsung.png" /></div>
 			</a>
 			<span class="name"> Minsung Kim</span>
 		</div>
 		<div class="developer">
 			<a href="" target="_blank">
-				<div class="circle"><img src="../assets/DUMA.JPG" /></div>
+				<div class="circle"><img src="../assets/DUMA.jpg" /></div>
 			</a>
 			<span class="name"> Peter Cao</span>
 		</div>
 		<div class="developer">
 			<a href="" target="_blank">
-				<div class="circle"><img src="../assets/phong.JPG" /></div>
+				<div class="circle"><img src="../assets/phong.jpg" /></div>
 			</a>
 			<span class="name"> Phong Le</span>
 		</div>
