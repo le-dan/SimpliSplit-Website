@@ -12,6 +12,7 @@
 	"dependencies": {
 		"@iconify-prerendered/vue-devicon": "^0.23.1690176373",
 		"@iconify-prerendered/vue-line-md": "^0.23.1693459989",
+		"@iconify-prerendered/vue-mingcute": "^0.23.1691129278",
 		"@iconify-prerendered/vue-ph": "^0.23.1678258124",
 		"@iconify-prerendered/vue-simple-icons": "^0.23.1694411623",
 		"@iconify-prerendered/vue-vscode-icons": "^0.23.1691384710",

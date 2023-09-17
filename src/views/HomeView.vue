@@ -10,9 +10,28 @@ import { IconFileTypeFirebase } from "@iconify-prerendered/vue-vscode-icons";
 import { IconFileTypeTailwind } from "@iconify-prerendered/vue-vscode-icons";
 import { IconFileTypeTypescriptOfficial } from "@iconify-prerendered/vue-vscode-icons";
 import { IconFileTypeLightExpo } from "@iconify-prerendered/vue-vscode-icons";
+import { IconArrowDownLine } from "@iconify-prerendered/vue-mingcute";
 
 const msg =
 	"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique blandit neque, id venenatis diam feugiat ut.";
+
+function scrollToFirstSlideshowCard() {
+	// Find the element with the id "firstSlideshowCard"
+	const firstSlideshowCard = document.getElementById("firstSlideshowCard");
+	const arrowElement = document.getElementById("arrow");
+	// Check if the element exists
+	if (firstSlideshowCard) {
+		// Scroll to the element
+		firstSlideshowCard.scrollIntoView({
+			behavior: "smooth", // You can change this to "auto" for instant scrolling
+			block: "start", // Scroll to the top of the element
+		});
+
+		if (arrowElement) {
+			arrowElement.style.visibility = "hidden";
+		}
+	}
+}
 </script>
 
 <template>
@@ -36,7 +55,7 @@ const msg =
 						transitionDuration: '0.2s',
 						transitionTimingFunction: 'linear',
 					}"
-					:delay="1500"
+					:delay="1200"
 				>
 					About <Logo />,
 				</div>
@@ -50,29 +69,60 @@ const msg =
 						transitionDuration: '0.2s',
 						transitionTimingFunction: 'linear',
 					}"
-					:delay="2500"
+					:delay="2000"
 				>
 					<h3>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Mauris tristique blandit neque, id venenatis diam
-						feugiat ut. Nulla faucibus quam sit amet lacus iaculis
-						aliquet. Suspendisse malesuada libero id commodo
-						sollicitudin. Pellentesque vel purus ac dolor gravida
-						ultricies. Nullam non ligula vel elit congue viverra.
-						Pellentesque ornare lacus id purus molestie bibendum.
-						Etiam dictum eros a elit mollis consectetur. Sed ut
-						placerat nulla. Quisque sit amet ultrices lacus, id
-						suscipit augue. Curabitur tempor leo vel ornare
-						interdum.
+						The purpose of the app is to simplify the process of
+						splitting the bill in large groups. Instead of one
+						person having to pay with their card and calculate
+						individual shares, the app allows users to scan a
+						restaurant receipt and send a payment request via text
+						message with a single button. It eliminates the need to
+						individually calculate the tax/tip and send Venmo/Zelle
+						requests individually. Although restaurants have been
+						allowing customers to pay separately, it makes the whole
+						process very tedious for the employee and further
+						complicated..
 					</h3>
 				</div>
+			</div>
+			<div class="arrow">
+				<IconArrowDownLine
+					class="arrow-icon"
+					v-motion
+					:initial="{ opacity: 0 }"
+					:enter="{
+						opacity: 1,
+						transitionDuration: '0.3s',
+						transitionTimingFunction: 'linear',
+					}"
+					:delay="3000"
+					@click="scrollToFirstSlideshowCard"
+				/>
 			</div>
 		</div>
 
 		<div class="slideshow-section">
-			<SlideshowCard :msg="msg" :initial="true" />
-			<SlideshowCard :msg="msg" :initial="false" reverse />
-			<SlideshowCard :msg="msg" :initial="false" />
+			<SlideshowCard
+				id="firstSlideshowCard"
+				:img="'scan.gif'"
+				:header="'Scan'"
+				:msg="msg"
+				:initial="true"
+			/>
+			<SlideshowCard
+				:img="'split.gif'"
+				:header="'Split'"
+				:msg="msg"
+				:initial="false"
+				reverse
+			/>
+			<SlideshowCard
+				:img="'settle.gif'"
+				:header="'Settle'"
+				:msg="msg"
+				:initial="false"
+			/>
 		</div>
 		<div class="techstack-section">
 			<div
@@ -85,7 +135,7 @@ const msg =
 					transitionDuration: '0.2s',
 					transitionTimingFunction: 'linear',
 				}"
-				:delay="500"
+				:delay="2000"
 			>
 				Technologies Used<span>,</span>
 			</div>
@@ -99,7 +149,7 @@ const msg =
 					transitionDuration: '0.2s',
 					transitionTimingFunction: 'linear',
 				}"
-				:delay="1000"
+				:delay="2500"
 			>
 				<IconFileTypeReactts class="react" />
 				<IconFileTypePython class="python" />
@@ -126,103 +176,123 @@ body {
 	background-color: rgb(24 24 27); // bg-zinc-900
 	color: whitesmoke;
 
-	.title {
-		font-size: 50px;
-		height: 12rem;
-		padding-right: 10px;
-		text-align: center;
-		justify-content: center;
-		align-items: center;
-		display: flex;
-		font-weight: bold;
-		user-select: none;
-
-		.title-border {
-			background-color: rgb(28, 28, 32);
-			border-radius: 20px;
-			border-width: 3px;
-			padding: 10px 35px;
-			box-shadow: 0 0 10px 0 rgb(32, 32, 32);
-			transform: scale(1);
-			transition: all 0.2s ease-out;
-
-			&:hover {
-				transform: scale(1.05);
-				box-shadow: 0 0 20px 0 rgb(48, 48, 48);
-
-				.title-vt {
-					color: #e5751f;
-				}
-
-				.title-xi {
-					color: #861f41;
-				}
-			}
-
-			.title-vt {
-				font-size: 20px;
-				color: #861f41;
-			}
-
-			.title-xi {
-				font-size: 20px;
-				color: #e5751f;
-			}
-		}
-	}
-
 	.intro-section,
 	.description-section,
 	.slideshow-section,
 	.techstack-section,
 	.developer-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		width: 100%;
 		padding: 4rem 5rem;
 		font-weight: 100;
 	}
 
 	.intro-section {
-	}
-
-	.description-section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
-		.description-header {
+		.title {
 			font-size: 50px;
+			padding: 10px;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			display: flex;
 			font-weight: bold;
+			user-select: none;
+
+			.title-border {
+				background-color: rgb(28, 28, 32);
+				border-radius: 20px;
+				border-width: 3px;
+				padding: 10px 35px;
+				box-shadow: 0 0 10px 0 rgb(32, 32, 32);
+				transform: scale(1);
+				transition: all 0.2s ease-out;
+
+				&:hover {
+					transform: scale(1.05);
+					box-shadow: 0 0 20px 0 rgb(48, 48, 48);
+
+					.title-vt {
+						color: #e5751f;
+					}
+
+					.title-xi {
+						color: #861f41;
+					}
+				}
+
+				.title-vt {
+					font-size: 20px;
+					color: #861f41;
+				}
+
+				.title-xi {
+					font-size: 20px;
+					color: #e5751f;
+				}
+			}
 		}
 
-		.description {
-			display: flex;
-			gap: 25px;
-			width: 100%;
-			h3 {
-				font-size: 27.5px;
-				width: 80%;
+		.description-section {
+			gap: 5px;
+			.description-header {
+				font-size: 45px;
+				font-weight: bold;
 			}
-			img {
-				width: 500px;
-				height: 400px;
+
+			.description {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				gap: 25px;
+				width: 100%;
+				h3 {
+					font-size: 25px;
+					width: 80%;
+				}
+				img {
+					width: 500px;
+					height: 400px;
+				}
+			}
+		}
+
+		.arrow {
+			height: 60px;
+			width: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.arrow-icon {
+				height: 90%;
+				width: 90%;
+				border-radius: 30px;
+				border-style: solid;
+				border-color: white;
+				border-width: 2px;
+				padding: 3px;
+
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					color: #ec625f;
+					border-color: #ec625f;
+					cursor: pointer;
+					transform: scale(1.1);
+				}
 			}
 		}
 	}
 
 	.slideshow-section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
 		gap: 5rem;
-		align-items: center;
 	}
 
 	.techstack-section {
-		display: flex;
-		gap: 10px;
-		flex-direction: column;
+		gap: 2rem;
 		justify-content: space-between;
-		align-items: center;
 
 		.techstack-title {
 			font-weight: bold;
@@ -230,7 +300,6 @@ body {
 
 			span {
 				color: #ec625f;
-				font-size: 60px;
 			}
 		}
 
@@ -254,6 +323,9 @@ body {
 				}
 			}
 		}
+	}
+
+	.developer-section {
 	}
 
 	.footnote {

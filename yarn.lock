@@ -214,6 +214,11 @@
   resolved "https://registry.npmjs.org/@iconify-prerendered/vue-line-md/-/vue-line-md-0.23.1693459989.tgz"
   integrity sha512-WW4JQDwegbUoo2Cdf2RoRtX8NgarmzLP5HpGlgb8lhJuWPRaNbv27Sl/jSboTrJtkt9Fh1kGje1pNMUqc5G0NA==
 
+"@iconify-prerendered/vue-mingcute@^0.23.1691129278":
+  version "0.23.1691129278"
+  resolved "https://registry.npmjs.org/@iconify-prerendered/vue-mingcute/-/vue-mingcute-0.23.1691129278.tgz"
+  integrity sha512-ULhF48PmC4P/hoCfpu4iridZTmGINeNw1yzJ2jUpm+zoSblbwNyTrRJMKeAl0B1jk1FpuVUeov0O+3P4mX1LLA==
+
 "@iconify-prerendered/vue-ph@^0.23.1678258124":
   version "0.23.1678258124"
   resolved "https://registry.npmjs.org/@iconify-prerendered/vue-ph/-/vue-ph-0.23.1678258124.tgz"

@@ -56,10 +56,6 @@
 
 <style scoped lang="scss">
 .developer-container {
-	background-color: rgb(30, 30, 30);
-	box-shadow: 0 0 35px 0 #292929;
-	border-radius: 30px;
-
 	display: flex;
 	justify-content: center;
 	gap: 3rem;
@@ -105,11 +101,8 @@
 	font-size: 40px;
 	font-weight: bold;
 	text-align: center;
-	margin-bottom: 1.5rem;
-
 	span {
 		color: #ec625f;
-		font-size: 60px;
 	}
 }
 </style>
