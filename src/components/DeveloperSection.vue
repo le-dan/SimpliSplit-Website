@@ -11,7 +11,7 @@
 			transitionDuration: '0.2s',
 			transitionTimingFunction: 'linear',
 		}"
-		:delay="1500"
+		:delay="1000"
 	>
 		Developed by<span>,</span>
 	</div>
@@ -25,7 +25,7 @@
 			transitionDuration: '0.2s',
 			transitionTimingFunction: 'linear',
 		}"
-		:delay="2000"
+		:delay="1500"
 	>
 		<div class="developer">
 			<a href="" target="_blank">
