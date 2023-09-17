@@ -54,7 +54,7 @@ function scrollToFirstSlideshowCard() {
 					}"
 					:delay="1200"
 				>
-					About <Logo />,
+					About <Logo /><span>,</span>
 				</div>
 				<div
 					class="description"
@@ -239,6 +239,10 @@ body {
 			.description-header {
 				font-size: 45px;
 				font-weight: bold;
+
+				span {
+					color: #ec625f;
+				}
 			}
 
 			.description {
