@@ -16,13 +16,13 @@
                 transitionTimingFunction: 'linear',
         }" :delay="1500">
                 <div class="developer">
-                        <a href="" target="_blank">
-                                <div class="circle"><img src="../assets/minsung.png" /></div>
+                        <a href="https://github.com/kmsungporant/" target="_blank">
+                                <div class="circle"><img src="../assets/minsung.jpg" /></div>
                         </a>
                         <span class="name"> Minsung Kim</span>
                 </div>
                 <div class="developer">
-                        <a href="" target="_blank">
+                        <a href="https://github.com/le-dan/" target="_blank">
                                 <div class="circle"><img src="../assets/dan.jpg" /></div>
                         </a>
                         <span class="name"> Dan Le</span>
