@@ -9,11 +9,20 @@ import { IconCopyrightThin } from "@iconify-prerendered/vue-ph";
                 <span class="copyright">
                         <IconCopyrightThin /> 2023 SimpliSplit | All Rights Reserved
                 </span>
+
+
+
                 <div class="link">
+
                         <a class="github" href="https://github.com/kmsungporant/HackXI">
                                 <IconGithubLoop />
                         </a>
+                        <router-link to="/privacy">
+                                Privacy Policies
+                        </router-link>
+
                 </div>
+
         </div>
 </template>
 
@@ -38,6 +47,7 @@ import { IconCopyrightThin } from "@iconify-prerendered/vue-ph";
                 margin-left: auto;
                 margin-right: 1rem;
                 gap: 10px;
+                align-items: center;
 
                 .github {
                         display: flex;
